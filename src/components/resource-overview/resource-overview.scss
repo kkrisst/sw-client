@@ -1,0 +1,30 @@
+.resource-overview {
+  padding: 30px;
+
+  .resource-wrapper {
+    cursor: pointer;
+    background-color: #e6edff;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+  }
+
+  .load-button-wrapper {
+    .load-button {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #4590ff;
+      color: #fff;
+      border-radius: 11px;
+      text-transform: uppercase;
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: #003f9e;
+      }
+    }
+  }
+
+}

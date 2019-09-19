@@ -18,12 +18,12 @@ const ResourceOverview = ({ rootId }) => {
   const resourceTtems = (resources || []);
 
   return (
-    <div>
+    <div className='resource-overview'>
       <div>
         {resources && (
           resourceTtems.results.map( (item, index) => {
             return (
-              <div key={item.url}>
+              <div key={item.url} className='resource-wrapper'>
               {
                 <Resource item={item} />
               }
@@ -35,12 +35,14 @@ const ResourceOverview = ({ rootId }) => {
       {
         resources && resources.next
         ? (
-          <div onClick={() => {
-              const nextRootId = resources.next.split('https://swapi.co/api/')[1];
-              dispatch(fetchRoot(nextRootId))
-            }
-          }>
-          Load more
+          <div className='load-button-wrapper'>
+            <div className='load-button' onClick={() => {
+                const nextRootId = resources.next.split('https://swapi.co/api/')[1];
+                dispatch(fetchRoot(nextRootId))
+              }
+            }>
+            Load more
+            </div>
           </div>
         )
         : ''
