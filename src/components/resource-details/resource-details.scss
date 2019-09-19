@@ -1,6 +1,10 @@
 .resource-details {
   display: block;
   margin: 5px 5px;
+  background-color: #e6edff;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 7px;
 
   &.hidden {
     display: none;
