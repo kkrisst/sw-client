@@ -8,12 +8,13 @@ import './ref-list.scss';
 
 const RefList = ({ refs }) => {
   const dispatch = useDispatch();
+  console.log('refs');
 
   return (
     <div className='ref-list'>
       {
         refs.map((ref, index) => {
-          return (<Link key={index} className='' onClick={() => {dispatch(selectSpecificRef(ref))}} to='/specific'>{ref}</Link>)
+          return (<Link key={index} className='ref-link' onClick={() => {dispatch(selectSpecificRef(ref))}} to='/specific'>{ref}</Link>)
         })
       }
     </div>
@@ -21,4 +22,3 @@ const RefList = ({ refs }) => {
 };
 
 export default RefList;
-

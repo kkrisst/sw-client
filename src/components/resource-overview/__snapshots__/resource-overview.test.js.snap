@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the ResourceOverview component expect to render ResourceOverview component 1`] = `ShallowWrapper {}`;
