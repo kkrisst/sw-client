@@ -1,8 +1,11 @@
-import { getRoots } from './api';
+import { getRoots, getRoot } from './api';
 import {
 	FETCH_ROOTS,
 	FETCH_ROOTS_FAILURE,
 	FETCH_ROOTS_SUCCESS,
+	FETCH_ROOT,
+	FETCH_ROOT_FAILURE,
+	FETCH_ROOT_SUCCESS,
 } from './constants';
 
 export const fetchRoots = () => dispatch => {
@@ -13,5 +16,16 @@ export const fetchRoots = () => dispatch => {
 	return request.then(
 		resp => dispatch({ type: FETCH_ROOTS_SUCCESS, payload: resp }),
 		error => dispatch({ type: FETCH_ROOTS_FAILURE, payload: error }),
+	);
+};
+
+export const fetchRoot = (rootId) => dispatch => {
+	dispatch({ type: FETCH_ROOT });
+
+	const request = getRoot(rootId);
+
+	return request.then(
+		resp => dispatch({ type: FETCH_ROOT_SUCCESS, payload: resp, rootId }),
+		error => dispatch({ type: FETCH_ROOT_FAILURE, payload: error }),
 	);
 };
