@@ -9,4 +9,9 @@ export default {
 		payload: {},
 		error: void 0,
 	},
+	specific: {
+		isLoading: true,
+		payload: void 0,
+		error: void 0,
+	},
 };
