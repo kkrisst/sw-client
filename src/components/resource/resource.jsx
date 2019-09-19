@@ -22,7 +22,7 @@ const Resource = ({ item }) => {
         ? ''
         : (
             <div
-              className='main-prop'
+              className='inner-wrapper'
               onClick={() => {
                 setShowDetails(!showDetails)}
               }  

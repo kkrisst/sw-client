@@ -13,13 +13,28 @@ const ResourceDetails = ({ item, hidden }) => {
       {
         itemProps.map((prop, index) => {
           if(item[prop] !== null) {
+            
             if (Array.isArray(item[prop])) {
-              return (<div key={index}>{prop}:<RefList refs={item[prop]} /></div>)
+              return (
+                <div key={index} className='reflist-wrapper'>
+                  <div className='name'>{prop}:</div>
+                  <RefList refs={item[prop]} />
+                </div>
+                )
             } else if (item[prop].toString().startsWith("https://swapi.co/api/")) {
-              return (<div key={index}>{prop}:<RefList refs={[item[prop]]} /></div>)
+              return (
+                <div key={index} className='reflist-wrapper'>
+                  <div className='name'>{prop}:</div>
+                  <RefList refs={[item[prop]]} />
+                </div>
+                )
             }
+
             return (
-              <div key={index}>{prop}: {item[prop]}</div>
+              <div key={index} className='prop-line'>
+                <div className='name'>{prop}:</div>
+                <div className='value'>{item[prop]}</div>
+              </div>
             )
           }
         })

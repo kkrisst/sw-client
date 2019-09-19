@@ -1,7 +1,31 @@
 .resource-details {
   display: block;
-}
+  margin: 5px 5px;
 
-.resource-details.hidden {
-  display: none;
+  &.hidden {
+    display: none;
+  }
+
+  .reflist-wrapper {
+    display: flex;
+    word-break: break-word;
+    margin-bottom: 5px;
+
+    .name {
+      font-style: italic;
+    }
+  }
+
+  .prop-line {
+    display: flex;
+    margin-bottom: 5px;
+
+    .name {
+      font-style: italic;
+    }
+
+    .value {
+      margin-left: 10px;
+    }
+  }
 }

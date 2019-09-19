@@ -10,7 +10,7 @@ const RefList = ({ refs }) => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className='ref-list'>
       {
         refs.map((ref, index) => {
           return (<Link key={index} className='' onClick={() => {dispatch(selectSpecificRef(ref))}} to='/specific'>{ref}</Link>)
