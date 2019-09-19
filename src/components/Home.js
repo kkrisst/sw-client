@@ -11,6 +11,8 @@ import {
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import ResourceOverview from './resource-overview/resource-overview.jsx';
+
 const Home = () => {
 	const dispatch = useDispatch();
 	const [tab, setTab] = useState(void 0);
@@ -47,7 +49,7 @@ const Home = () => {
 								key={k}
 								tabId={k}
 							>
-								<code>{'todo: load resource table'}</code>
+								<ResourceOverview rootId={k} />
 							</TabPane>
 						))}
 					</TabContent>
