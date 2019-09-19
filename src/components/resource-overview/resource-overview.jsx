@@ -30,7 +30,12 @@ const ResourceOverview = ({ rootId }) => {
       {
         resources && resources.next
         ? (
-          <div>
+          <div onClick={() => {
+              //console.log(resources.next);
+              const nextRootId = resources.next.split('https://swapi.co/api/')[1];
+              dispatch(fetchRoot(nextRootId))
+            }
+          }>
           Load more
           </div>
         )
