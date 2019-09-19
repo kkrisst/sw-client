@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { useDispatch } from 'react-redux';
+import ResourceDetails from '../resource-details/resource-details.jsx';
 
 import './resource.scss';
 
@@ -29,6 +30,7 @@ const Resource = ({ item }) => {
               <div className='main-prop'>
                 {item[mainProp]}
               </div>
+              <ResourceDetails item={item} hidden={!showDetails}/>
               
             </div>
           )
