@@ -1,5 +1,6 @@
 import App from './components/App';
 import Home from './components/Home';
+import Specific from './components/Specific';
 import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -25,6 +26,11 @@ const routes = (
 						component={Home}
 						exact
 						path={'/'}
+					/>
+					<Route
+						component={Specific}
+						exact
+						path={'/specific'}
 					/>
 				</Switch>
 			</App>
